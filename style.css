@@ -31,11 +31,23 @@ body {
 
 .container {
   background-color: var(--card-bg);
-  width: 90%;
   max-width: 600px;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 90%;
+  margin: 50px auto; /* center with space from top */
+  padding: 30px 40px;
+  border-radius: 15px; /* rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Optional: hover effect for card */
+.container:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: smooth transitions for elements inside */
+header, section, form, ul {
+  transition: all 0.3s ease;
 }
 
 /* BUTTONS */
