@@ -1,19 +1,27 @@
 /* LIGHT MODE (default) */
 :root {
-  --bg-color: #ffffff;      /* white background */
-  --text-color: #222222;    /* dark text */
-  --card-bg: #f4f4f9;       /* light card background */
-  --button-bg: #0078d7;     /* blue buttons */
-  --button-text: #ffffff;    /* white text on buttons */
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --card-bg: #f4f4f9;
+  --button-bg: #0078d7;
+  --button-text: #ffffff;
+  --input-bg: #ffffff;      /* input background */
+  --input-text: #222222;    /* input text color */
+  --li-bg: #f9f9f9;        /* background of todo items */
+  --li-text: #222222;      /* text color of todo items */
 }
 
 /* DARK MODE */
 body.dark {
-  --bg-color: #1e1e1e;      /* dark background */
-  --text-color: #eee;       /* light text */
-  --card-bg: #2c2c2c;       /* dark card */
-  --button-bg: #5555ff;     /* darker button */
+  --bg-color: #1e1e1e;
+  --text-color: #eee;
+  --card-bg: #2c2c2c;
+  --button-bg: #5555ff;
   --button-text: #fff;
+  --input-bg: #333333;      /* input background in dark mode */
+  --input-text: #ffffff;    /* input text color in dark mode */
+  --li-bg: #3a3a3a;        /* darker background for todo items */
+  --li-text: #ffffff;      /* white text */
 }
 
 /* PAGE CENTERING */
@@ -75,6 +83,9 @@ input {
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ul {
@@ -85,11 +96,13 @@ ul {
 li {
   padding: 8px 10px;
   margin-bottom: 6px;
-  background-color: #f9f9f9;
+  background-color: var(--li-bg);
+  color: var(--li-text);
   border-radius: 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 li.completed {
@@ -101,4 +114,11 @@ li button {
   color: rgb(102, 37, 37);
   font-weight: bold;
   padding: 0;
+}
+.subtitle {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-top: -5px;
+  margin-bottom: 20px;
+  font-style: italic;
 }
